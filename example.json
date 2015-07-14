@@ -1,0 +1,78 @@
+{
+    "@context": "http://example.com", // for standard specification
+    "@type": "Phone", // class
+    "@uuid": "26DE01C9-804E-44C3-BC15-BE993B1A0B86", // unique indentifier, generated with `uuidgen`
+    "@name": "Jackie's iPhone", // human readable name
+    "@nested": [{
+        "@type": "light",
+        "@name": "Jackie's iPhone.light", // human readable, can be omitted, can be automated generated
+        "@uuid": "D70A66A6-CF18-455A-8186-F77316D3B5A0", // uuid is still needed
+        "@cap": {
+            "light": {
+                "url": "http://xxx.com/light0/light",
+                "input": {
+                    "brightness": "double",
+                },
+                "output": {},
+            },
+        }
+    }, {
+        "@type": "camera",
+        //"@name" : "Jackie's iPhone.camera0" // should be automated generated
+        "@uuid": "2CE7D6A2-B283-497C-820B-56DCEE5EE35C",
+        "@cap": {
+            "location": {
+                "url": "", // url of request, no url means that this device provide the answer right away
+                "input": {}, // no input required
+                "output": {
+                    "location": {
+                        "type": "Point",
+                        "coordinates": [0, 0, 0]
+                    }, // GeoJSON format
+                }, // the output is provided hear
+            },
+            "fieldOfView": {
+                "url": "", //url of request, no url
+                "input": {},
+                "output": {
+                    "upperLeft": {
+                        "type": "Point",
+                        "coordinates": [0, 0, 0]
+                    },
+                    "upperRight": {
+                        "type": "Point",
+                        "coordinates": [0, 0, 0]
+                    },
+                    "lowerLeft": {
+                        "type": "Point",
+                        "coordinates": [0, 0, 0]
+                    },
+                    "upperRight": {
+                        "type": "Point",
+                        "coordinates": [0, 0, 0]
+                    },
+                },
+            },
+            "image": {
+                "url": "http://xxx.com/camera0/image",
+                "input": {},
+                "output": {
+                    "url": "string", // the url points to the image taken
+                },
+            },
+        },
+    }, {
+        "@type": "speaker",
+        "@uuid": "707CFFC9-A6F0-4028-8DA2-5A8EBEEE8129",
+        "@cap": {
+            "playContentOfFile": {
+                "url": "http://xxx.com/speaker/play",
+                "input": {
+                    "url": "string", // provide the url to the file to play
+                    "volume": "double" // provide the volume to play
+                },
+                "output": {},
+            },
+        },
+    }, ],
+}
