@@ -10,10 +10,10 @@
             "light": {
                 "url": "http://xxx.com/light0/light",
                 "input": {
-                    "brightness": "double",
+                    "brightness": "double"
                 },
-                "output": {},
-            },
+                "output": {}
+            }
         }
     }, {
         "@type": "camera",
@@ -27,11 +27,11 @@
                     "location": {
                         "type": "Point",
                         "coordinates": [0, 0, 0]
-                    }, // GeoJSON format
-                }, // the output is provided hear
+                    } // GeoJSON format
+                } // the output is provided hear
             },
             "fieldOfView": {
-                "url": "", //url of request, no url
+                "url": "", // url of request, no url
                 "input": {},
                 "output": {
                     "upperLeft": {
@@ -49,17 +49,17 @@
                     "upperRight": {
                         "type": "Point",
                         "coordinates": [0, 0, 0]
-                    },
-                },
+                    }
+                }
             },
             "image": {
                 "url": "http://xxx.com/camera0/image",
                 "input": {},
                 "output": {
-                    "url": "string", // the url points to the image taken
-                },
-            },
-        },
+                    "url": "string" // the url points to the image taken
+                }
+            }
+        }
     }, {
         "@type": "speaker",
         "@uuid": "707CFFC9-A6F0-4028-8DA2-5A8EBEEE8129",
@@ -70,8 +70,8 @@
                     "url": "string", // provide the url to the file to play
                     "volume": "double" // provide the volume to play
                 },
-                "output": {},
-            },
-        },
-    }, ],
+                "output": {}
+            }
+        }
+    } ]
 }
