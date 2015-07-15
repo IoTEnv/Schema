@@ -1,5 +1,4 @@
 {
-    "@context": "http://example.com", // for standard specification
     "@type": "Phone", // class
     "@uuid": "26DE01C9-804E-44C3-BC15-BE993B1A0B86", // unique indentifier, generated with `uuidgen`
     "@name": "Jackie's iPhone", // human readable name
@@ -18,7 +17,7 @@
         }
     }, {
         "@type": "camera",
-        //"@name" : "Jackie's iPhone.camera0" // should be automated generated
+        // "@name" : "Jackie's iPhone.camera0" // should be automated generated
         "@uuid": "2CE7D6A2-B283-497C-820B-56DCEE5EE35C",
         "@cap": {
             "location": {
