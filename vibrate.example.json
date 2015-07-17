@@ -1,0 +1,16 @@
+[{
+    "@type": "phone", // class
+    "@uuid": "GoPhone-1", // unique indentifier, generated with `uuidgen`
+    "@name": "just a Phone", // human readable name
+    "@rssi": "-22",
+    "@cap": {
+        "identify": {
+            "channel": "cmu/gcf-framework",
+            "command": "IDENTIFY",
+            "messageType": "I",
+            "version" : 1,
+            "input": {},
+            "output": {}
+        }
+    }
+}]

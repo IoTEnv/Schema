@@ -1,12 +1,25 @@
-{
-    "@type": "Phone", // class
+[{
+    "@type": "phone", // class
     "@uuid": "26DE01C9-804E-44C3-BC15-BE993B1A0B86", // unique indentifier, generated with `uuidgen`
     "@name": "Jackie's iPhone", // human readable name
+    "@rssi": "-22",
+    "@cap": {
+        "identify": {
+            "url": "http://xxx.com/iphone/identify",
+            "input": {},
+            "output": {}
+        }
+    },
     "@nested": [{
         "@type": "light",
         "@name": "Jackie's iPhone.light", // human readable, can be omitted, can be automated generated
         "@uuid": "D70A66A6-CF18-455A-8186-F77316D3B5A0", // uuid is still needed
         "@cap": {
+            "identify": {
+                "url": "http://xxx.com/light/identify",
+                "input": {},
+                "output": {}
+            },
             "light": {
                 "url": "http://xxx.com/light0/light",
                 "input": {
@@ -20,6 +33,11 @@
         // "@name" : "Jackie's iPhone.camera0" // should be automated generated
         "@uuid": "2CE7D6A2-B283-497C-820B-56DCEE5EE35C",
         "@cap": {
+            "identify": {
+                "url": "http://xxx.com/camera/identify",
+                "input": {},
+                "output": {}
+            },
             "location": {
                 "url": "", // url of request, no url means that this device provide the answer right away
                 "input": {}, // no input required
@@ -64,6 +82,11 @@
         "@type": "speaker",
         "@uuid": "707CFFC9-A6F0-4028-8DA2-5A8EBEEE8129",
         "@cap": {
+            "identify": {
+                "url": "http://xxx.com/speaker/identify",
+                "input": {},
+                "output": {}
+            },
             "playContentOfFile": {
                 "url": "http://xxx.com/speaker/play",
                 "input": {
@@ -73,5 +96,24 @@
                 "output": {}
             }
         }
-    } ]
-}
+    }]
+}, {
+    "@type": "light",
+    "@name": "desk lamp",
+    "@uuid": "83E62620-0A5E-4693-85C3-00A60F4934C8",
+    "@rssi": "-10",
+    "@cap": {
+        "identify": {
+            "url": "http://xxx.com/lamp/identify",
+            "input": {},
+            "output": {}
+        },
+        "light": {
+            "url": "http://xxx.com/lamp/light",
+            "input": {
+                "brightness": "double"
+            },
+            "output": {}
+        }
+    }
+}]
